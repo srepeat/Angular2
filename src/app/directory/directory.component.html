@@ -1,0 +1,19 @@
+<!--<p>
+  directory works!
+</p>
+&lt;!&ndash;<h1>{{directory}}</h1>&ndash;&gt;-->
+<ul>
+  <li *ngFor="let pop of people">
+    <div>
+      <span [ngStyle]="{background:pop.color}">{{pop.color}}</span>
+      <h3>{{pop.name}}</h3>
+      <h3>{{pop.phone}}</h3>
+    </div>
+  </li>
+</ul>
+
+<!--
+  https://
+  github.com/OceanWoo/OceanWoo.github.io/
+  blob/master/Angular2/styles.css
+-->

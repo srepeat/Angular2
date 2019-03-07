@@ -1,0 +1,10 @@
+.btn{
+  background: #222;
+  color: white;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #2780E3;
+  /* border-color: #2780E3; */
+}
