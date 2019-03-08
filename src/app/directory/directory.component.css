@@ -1,0 +1,23 @@
+#filterBack{
+  background: #666666;
+}
+
+#filterBack input{
+  float: right;
+  width: 280px;
+  height: 44.9px;
+  background:#F5F5F5 ;
+}
+
+#filterBack label{
+  color: #00ee00;
+  font-size: 25px;
+  padding-left: 20px;
+}
+
+#popColor{
+  margin-top: 15px;
+  border: 1px solid beige;
+  width: 900px;
+  height: 100px;
+}

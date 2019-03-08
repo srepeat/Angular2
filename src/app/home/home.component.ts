@@ -1,9 +1,11 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-
+import {LoggingService} from '../logging.service'
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  //声明这个类被调用
+  providers:[LoggingService]
 })
 export class HomeComponent implements OnInit {
   //定义属性值==>准备数据
@@ -27,7 +29,14 @@ export class HomeComponent implements OnInit {
   firstYellEvent(){
     this.onYell.emit();
   }
-  constructor() { }
+
+  //调用服务层的方法执行
+  constructor(private logger:LoggingService){}
+
+  //写方法，调用serve中的方法
+  logIt(){
+    this.logger.log();
+  }
 
   ngOnInit() {
   }

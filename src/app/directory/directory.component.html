@@ -2,9 +2,17 @@
   directory works!
 </p>
 &lt;!&ndash;<h1>{{directory}}</h1>&ndash;&gt;-->
+<!--查询按钮-->
+<h2>Personal Contact</h2>
+<form id="filterBack">
+  <label>Filter Name</label>
+  <input type="text" [(ngModel)]="term" name="first">
+</form>
+
+
 <ul>
-  <li *ngFor="let pop of people">
-    <div>
+  <li *ngFor="let pop of people | filter:term">
+    <div id="popColor">
       <span [ngStyle]="{background:pop.color}">{{pop.color}}</span>
       <h3>{{pop.name}}</h3>
       <h3>{{pop.phone}}</h3>
@@ -12,6 +20,7 @@
   </li>
 </ul>
 
+<button (click)="logIt()">Logging Serve</button>
 <!--
   https://
   github.com/OceanWoo/OceanWoo.github.io/
